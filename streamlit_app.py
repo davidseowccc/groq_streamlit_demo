@@ -5,6 +5,8 @@ from groq import Groq
 st.set_page_config(page_icon="💬", layout="wide",
                    page_title="Groq Goes on STREAMLIT")
 
+st.title("FPSO Parametric Survey")
+# st.subheader("David Seow, updated 24 Dec 2022")
 
 def icon(emoji: str):
     """Shows an emoji as a Notion-style page icon."""
@@ -17,6 +19,10 @@ def icon(emoji: str):
 icon("🏎️")
 
 st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
+st.markdown('David Seow, updated 15 Aug 2024')
+st.subheader('Deploy a Streamlit Web App')
+st.subheader('Scatterplots of FPSO parametric survey')
+st.markdown('')
 
 client = Groq(
     api_key=st.secrets["GROQ_API_KEY"],
