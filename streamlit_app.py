@@ -55,7 +55,7 @@ with col1:
         "Choose a model:",
         options=list(models.keys()),
         format_func=lambda x: models[x]["name"],
-        index=7  # row 7
+        index=6  # row 6
     )
 
 # Detect model change and clear chat history if model has changed
