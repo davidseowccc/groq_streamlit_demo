@@ -64,7 +64,9 @@ if st.session_state.selected_model != model_option:
     st.session_state.messages = []
     st.session_state.selected_model = model_option
 
-max_tokens_range = models[model_option]["tokens"]
+# max_tokens_range = models[model_option]["tokens"]
+
+max_tokens_range = 8192
 
 with col2:
     # Adjust max_tokens slider dynamically based on the selected model
