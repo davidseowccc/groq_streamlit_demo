@@ -5,8 +5,7 @@ from groq import Groq
 st.set_page_config(page_icon="💬", layout="wide",
                    page_title="Groq Goes on STREAMLIT")
 
-st.title("Groq Chat Streamlit App", divider="rainbow", anchor=False)
-# st.subheader("David Seow, updated 24 Dec 2022")
+st.title("Groq Chat Streamlit App")
 
 def icon(emoji: str):
     """Shows an emoji as a Notion-style page icon."""
