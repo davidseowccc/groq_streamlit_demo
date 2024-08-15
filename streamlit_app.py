@@ -43,9 +43,6 @@ models = {
     "llama-3.1-70b-versatile": {"name": "llama-3.1-70b-versatile", "tokens": 131072, "developer": "Meta"},
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768, "developer": "Mistral"},
 }
-# llama 3.1 max tokens: 
-#     "llama-guard-3-8b": {"name": "llama-guard-3-8b", "tokens": 8192, "developer": "Meta"}, 
-
 
 
 # Layout for model selection and max_tokens slider
@@ -64,9 +61,8 @@ if st.session_state.selected_model != model_option:
     st.session_state.messages = []
     st.session_state.selected_model = model_option
 
-# max_tokens_range = models[model_option]["tokens"]
-
-max_tokens_range = 8192
+max_tokens_range = models[model_option]["tokens"]
+# max_tokens_range = 8192
 
 with col2:
     # Adjust max_tokens slider dynamically based on the selected model
