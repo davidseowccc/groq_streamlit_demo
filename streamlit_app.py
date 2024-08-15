@@ -5,7 +5,7 @@ from groq import Groq
 st.set_page_config(page_icon="💬", layout="wide",
                    page_title="Groq Goes on STREAMLIT")
 
-st.title("FPSO Parametric Survey")
+st.title("Groq Chat Streamlit App", divider="rainbow", anchor=False)
 # st.subheader("David Seow, updated 24 Dec 2022")
 
 def icon(emoji: str):
