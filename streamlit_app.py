@@ -10,17 +10,15 @@ st.title("Groq Chat Streamlit App")
 def icon(emoji: str):
     """Shows an emoji as a Notion-style page icon."""
     st.write(
-        f'<span style="font-size: 78px; line-height: 1">{emoji}</span>',
+        f'<span style="font-size: 48px; line-height: 1">{emoji}</span>',
         unsafe_allow_html=True,
     )
 
 
 icon("🏎️")
 
-st.subheader("Groq Chat Streamlit App", divider="rainbow", anchor=False)
-st.markdown('David Seow, updated 15 Aug 2024')
-st.subheader('Deploy a Streamlit Web App')
-st.subheader('Scatterplots of FPSO parametric survey')
+st.subheader('David Seow, updated 15 Aug 2024', divider='rainbow', anchor=False)
+st.markdown('Deploy a Streamlit Web App')
 st.markdown('')
 
 client = Groq(
