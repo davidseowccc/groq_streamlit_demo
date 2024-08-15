@@ -41,9 +41,10 @@ models = {
     "llama3-70b-8192": {"name": "LLaMA3-70b-8192", "tokens": 8192, "developer": "Meta"},
     "llama-3.1-8b-instant": {"name": "llama-3.1-8b-instant", "tokens": 8000, "developer": "Meta"},
     "llama-3.1-70b-versatile": {"name": "llama-3.1-70b-versatile", "tokens": 8000, "developer": "Meta"},
-    "llama-3.1-405b-reasoning": {"name": "llama-3.1-405b-reasoning", "tokens": 16000, "developer": "Meta"}, 
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768, "developer": "Mistral"},
 }
+# For paying customers only
+#     "llama-3.1-405b-reasoning": {"name": "llama-3.1-405b-reasoning", "tokens": 16000, "developer": "Meta"}, 
 
 
 # Layout for model selection and max_tokens slider
@@ -54,7 +55,7 @@ with col1:
         "Choose a model:",
         options=list(models.keys()),
         format_func=lambda x: models[x]["name"],
-        index=7  # row 8
+        index=7  # row 7
     )
 
 # Detect model change and clear chat history if model has changed
