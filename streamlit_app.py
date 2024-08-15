@@ -39,8 +39,9 @@ models = {
     "llama-guard-3-8b": {"name": "llama-guard-3-8b", "tokens": 8192, "developer": "Meta"},
     "llama3-8b-8192": {"name": "LLaMA3-8b-8192", "tokens": 8192, "developer": "Meta"},
     "llama3-70b-8192": {"name": "LLaMA3-70b-8192", "tokens": 8192, "developer": "Meta"},
-    "llama-3.1-8b-instant": {"name": "llama-3.1-8b-instant", "tokens": 131072, "developer": "Meta"},
-    "llama-3.1-70b-versatile": {"name": "llama-3.1-70b-versatile", "tokens": 131072, "developer": "Meta"},
+    "llama-3.1-8b-instant": {"name": "llama-3.1-8b-instant", "tokens": 8000, "developer": "Meta"},
+    "llama-3.1-70b-versatile": {"name": "llama-3.1-70b-versatile", "tokens": 8000, "developer": "Meta"},
+    "llama-3.1-405b-reasoning": {"name": "llama-3.1-405b-reasoning", "tokens": 16000, "developer": "Meta"}, 
     "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768, "developer": "Mistral"},
 }
 
@@ -53,7 +54,7 @@ with col1:
         "Choose a model:",
         options=list(models.keys()),
         format_func=lambda x: models[x]["name"],
-        index=5  # row 5
+        index=8  # row 8
     )
 
 # Detect model change and clear chat history if model has changed
@@ -71,7 +72,7 @@ with col2:
         min_value=512,  # Minimum value to allow some flexibility
         max_value=max_tokens_range,
         # Default value or max allowed if less
-        value=min(7999, max_tokens_range),
+        value=min(min_value, max_tokens_range),
         step=512,
         help=f"Adjust the maximum number of tokens (words) for the model's response. Max for selected model: {max_tokens_range}"
     )
